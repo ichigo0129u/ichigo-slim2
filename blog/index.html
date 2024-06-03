@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <>
 <head>
-    <meta charset='utf-8'>
+  <meta charset='utf-8'>
     <title>スタートページ</title>
     <script>function getlevel(){
-        if(document.getElementById('word').value == "295m1eoy"){document.cookie = "yuki=True; path=/;";}else{
+        if(document.getElementById('word').value == "yuki"){document.cookie = "yuki=True; path=/;";}else{
         let req = new XMLHttpRequest();
         req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
         req.open("GET", "/answer?q="+document.getElementById('word').value);
@@ -15,5 +15,16 @@
     その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。<br>
     <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
     <div id="info">
+    <script language="Javascript">
+function Click_Sub() {
+	if (document.all.div1.style.display == "none") {
+		document.all.div1.style.display = "block"
+	} else {
+		document.all.div1.style.display = "none"
+　}
+}
+</script>
+<input type="button" value="詳細" onclick="Click_Sub()">
+<div id="div1">苺大福の改造インスタンスです。不具合があったらお知らせください</div>
 </body>
 </html>
